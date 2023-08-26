@@ -1,0 +1,50 @@
+name: UnEssentials
+version: '1.0.0'
+main: com.the5gi.unessentials.UnEssentials
+api-version: 1.20
+authors: [the5gi]
+description: essentials but not gay
+website: 5labs.us
+commands:
+  unessentials:
+    aliases:
+      - "uness"
+    permission: "unessentials.unessentials"
+    permission-message: "&cYou do not have permission to execute this command!"
+  gms:
+    permission: "unessentials.gms"
+    permission-message: "&cYou do not have permission to execute this command!"
+  gmc:
+    permission: "unessentials.gmc"
+    permission-message: "&cYou do not have permission to execute this command!"
+  gmsp:
+    permission: "unessentials.gmsp"
+    permission-message: "&cYou do not have permission to execute this command!"
+  gma:
+    permission: "unessentials.gma"
+    permission-message: "&cYou do not have permission to execute this command!"
+  essenchant:
+    permission: "unessentials.essenchant"
+    permission-message: "&cYou do not have permission to execute this command!"
+  chicken:
+    permission: "unessentials.chicken"
+    permission-message: "&cYou do not have permission to execute this command!"
+    description: "ignore me i just spawn a chicken because buh-cock"
+  hat:
+    permission: "unessentials.hat"
+    permission-message: "&cYou do not have permission to execute this command!"
+  fly:
+    permission: "unessentials.fly"
+    permission-message: "&cYou do not have permission to execute this command!"
+  top:
+    permission: "unessentials.top"
+    permission-message: "&cYou do not have permission to execute this command!"
+  butcher:
+    permission: "unessentials.butcher"
+    permission-message: "&cYou do not have permission to execute this command!"
+  back:
+    permission: "unessentials.back"
+    permission-message: "&cYou do not have permission to execute this command!"
+  name:
+    permission: "unessentials.name"
+    permission-message: "&cYou do not have permission to execute this command!"
