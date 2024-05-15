@@ -6,6 +6,7 @@ import java.util.List;
 
 import com.the5gi.unessentials.UnEssentials;
 import org.bukkit.GameMode;
+import org.bukkit.attribute.Attribute;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
@@ -42,7 +43,7 @@ public class GameModesCommands implements TabCompleter {
                 assert player != null;
                 player.setGameMode(GameMode.SURVIVAL);
                 String apostropheCheck = player.getName().endsWith("s") ? "'" : "'s";
-                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&c" + UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to SURVIVAL."));
+                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to SURVIVAL."));
                 player.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&cYour gamemode was updated to SURVIVAL."));
                 return false;
             }
@@ -67,7 +68,7 @@ public class GameModesCommands implements TabCompleter {
                 assert player != null;
                 player.setGameMode(GameMode.CREATIVE);
                 String apostropheCheck = player.getName().endsWith("s") ? "'" : "'s";
-                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&c" + UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to CREATIVE."));
+                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to CREATIVE."));
                 player.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&cYour gamemode was updated to CREATIVE."));
                 return false;
             }
@@ -92,7 +93,7 @@ public class GameModesCommands implements TabCompleter {
                 assert player != null;
                 player.setGameMode(GameMode.SPECTATOR);
                 String apostropheCheck = player.getName().endsWith("s") ? "'" : "'s";
-                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&c" + UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to SPECTATOR."));
+                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to SPECTATOR."));
                 player.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&cYour gamemode was updated to SPECTATOR."));
                 return false;
             }
@@ -117,7 +118,7 @@ public class GameModesCommands implements TabCompleter {
                 assert player != null;
                 player.setGameMode(GameMode.ADVENTURE);
                 String apostropheCheck = player.getName().endsWith("s") ? "'" : "'s";
-                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&c" + UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to ADVENTURE."));
+                sender.sendMessage(UnEssentials.color(UnEssentials.PREFIX + player.getName() + apostropheCheck + " gamemode was set to ADVENTURE."));
                 player.sendMessage(UnEssentials.color(UnEssentials.PREFIX + "&cYour gamemode was updated to ADVENTURE."));
                 return false;
             }

@@ -173,7 +173,7 @@ public class CoolCommands {
                         int entityCount = 0;
                         for (Entity entity : nearbyEntities) {
                             if (entity instanceof LivingEntity livingEntity) {
-                                livingEntity.remove();
+                                if (!(entity instanceof Player)) livingEntity.remove();
                                 entityCount++;
                             }
                         }

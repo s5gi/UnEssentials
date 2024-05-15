@@ -14,9 +14,16 @@ public class ChatReformatting implements Listener {
         if (Config.getFieldBool(Config.Chat.CHAT_FORMAT_ENABLED)) {
             event.setCancelled(true);
             String messagePre = UnEssentials.color(
-                    PlaceholderAPI.setPlaceholders(event
-                                    .getPlayer(),
-                            Config.getFieldString(Config.Chat.CHAT_FORMAT).replace("%MESSAGE%", event.getMessage()).replace("%NAME%", event.getPlayer().getName())));
+                    Config.getFieldString(Config.Chat.CHAT_FORMAT).replace(
+                            "%MESSAGE%", event.getMessage()).replace("%NAME%", event.getPlayer().getName()));
+            if (UnEssentials.PAPI) {
+                messagePre = UnEssentials.color(
+                        PlaceholderAPI.setPlaceholders(event
+                                        .getPlayer(),
+                                Config.getFieldString(Config.Chat.CHAT_FORMAT).replace("%MESSAGE%", event.getMessage()).replace("%NAME%", event.getPlayer().getName())));
+
+            }
+
             UnEssentials.plugin.getServer().broadcastMessage(messagePre);
         }
     }

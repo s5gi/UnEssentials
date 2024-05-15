@@ -64,7 +64,11 @@ public class UnEssentials extends JavaPlugin {
     public static void tickCycle() {
         for (Player player : plugin.getServer().getOnlinePlayers()) {
             String preName = player.getName();;
-            if (UnEssentials.PAPI && Config.getFieldBool(Config.Tab.TAB_FORMAT_ENABLED)) preName = color(PlaceholderAPI.setPlaceholders(player, Config.getFieldString(Config.Tab.TAB_FORMAT).replace("%NAME%", player.getName())));
+            if (Config.getFieldBool(Config.Tab.TAB_FORMAT_ENABLED)) {
+                preName = color(Config.getFieldString(Config.Tab.TAB_FORMAT).replace("%NAME%", player.getName()));
+                if (UnEssentials.PAPI) preName = color(PlaceholderAPI.setPlaceholders(player, Config.getFieldString(Config.Tab.TAB_FORMAT).replace("%NAME%", player.getName())));
+            }
+            //old system: ignored if PAPI wasn't installed : if (UnEssentials.PAPI && Config.getFieldBool(Config.Tab.TAB_FORMAT_ENABLED)) preName = color(PlaceholderAPI.setPlaceholders(player, Config.getFieldString(Config.Tab.TAB_FORMAT).replace("%NAME%", player.getName())));
             player.setPlayerListName(preName);
         }
     }
